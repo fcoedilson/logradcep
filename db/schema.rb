@@ -17,8 +17,13 @@ ActiveRecord::Schema.define(version: 20160411012643) do
   enable_extension "plpgsql"
 
   create_table "logradouros", force: :cascade do |t|
+    t.string   "uf"
+    t.string   "tipo"
     t.string   "nome"
+    t.string   "compl"
     t.string   "cep"
+    t.string   "bairro_ini"
+    t.string   "bairro_fim"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
