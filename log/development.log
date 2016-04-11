@@ -103,3 +103,278 @@ ORDER BY c.conname
   [1m[35m (2.5ms)[0m  DROP TABLE "logradouros" CASCADE
   [1m[36m (6.9ms)[0m  [1mCREATE TABLE "logradouros" ("id" serial primary key, "uf" character varying, "tipo" character varying, "nome" character varying, "compl" character varying, "cep" character varying, "bairro_ini" character varying, "bairro_fim" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
   [1m[35m (0.4ms)[0m  SELECT version FROM "schema_migrations"
+
+
+Started GET "/logradouros" for 127.0.0.1 at 2016-04-10 23:22:43 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by LogradourosController#index as HTML
+  [1m[35mLogradouro Load (52.5ms)[0m  SELECT "logradouros".* FROM "logradouros"
+  Rendered logradouros/index.html.erb within layouts/application (436.2ms)
+Completed 500 Internal Server Error in 539ms (ActiveRecord: 56.4ms)
+
+ActionView::Template::Error (undefined method `num_inicio' for #<Logradouro:0x007f7f319981c8>):
+    18:       <tr>
+    19:         <td><%= logradouro.nome %></td>
+    20:         <td><%= logradouro.cep %></td>
+    21:         <td><%= logradouro.num_inicio %></td>
+    22:         <td><%= logradouro.num_fim %></td>
+    23:         <td><%= link_to 'Show', logradouro %></td>
+    24:         <td><%= link_to 'Edit', edit_logradouro_path(logradouro) %></td>
+  app/views/logradouros/index.html.erb:21:in `block in _app_views_logradouros_index_html_erb__1099475120893110513_47147455625080'
+  app/views/logradouros/index.html.erb:17:in `_app_views_logradouros_index_html_erb__1099475120893110513_47147455625080'
+
+
+  Rendered /home/edilson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.9ms)
+  Rendered /home/edilson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /home/edilson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/edilson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (32.5ms)
+  Rendered /home/edilson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/edilson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/edilson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/edilson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/edilson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (71.8ms)
+  Rendered /home/edilson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/edilson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/edilson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (117.5ms)
+
+
+Started GET "/logradouros" for 127.0.0.1 at 2016-04-10 23:23:16 -0300
+Processing by LogradourosController#index as HTML
+  [1m[36mLogradouro Load (62.8ms)[0m  [1mSELECT "logradouros".* FROM "logradouros"[0m
+  Rendered logradouros/index.html.erb within layouts/application (4128.0ms)
+Completed 200 OK in 5749ms (Views: 5685.6ms | ActiveRecord: 62.8ms)
+
+
+Started GET "/assets/logradouros.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-10 23:23:22 -0300
+
+
+Started GET "/assets/scaffolds.self-0d37b220a9d6985f972f484f9e6877807cf2c5d1e7f99d826df5f9b2f04a4163.css?body=1" for 127.0.0.1 at 2016-04-10 23:23:22 -0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-04-10 23:23:22 -0300
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-04-10 23:23:22 -0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-04-10 23:23:22 -0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-04-10 23:23:22 -0300
+
+
+Started GET "/assets/logradouros.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-10 23:23:22 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-04-10 23:23:22 -0300
+
+
+Started GET "/logradouros/2" for 127.0.0.1 at 2016-04-10 23:23:26 -0300
+Processing by LogradourosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mLogradouro Load (0.5ms)[0m  SELECT  "logradouros".* FROM "logradouros" WHERE "logradouros"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered logradouros/show.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 605ms (ActiveRecord: 1.6ms)
+
+ActionView::Template::Error (undefined method `num_inicio' for #<Logradouro:0x007f7f1aba4bb8>):
+    12: 
+    13: <p>
+    14:   <strong>Num inicio:</strong>
+    15:   <%= @logradouro.num_inicio %>
+    16: </p>
+    17: 
+    18: <p>
+  app/views/logradouros/show.html.erb:15:in `_app_views_logradouros_show_html_erb__584702048851724746_70091942966720'
+
+
+  Rendered /home/edilson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.6ms)
+  Rendered /home/edilson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /home/edilson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/edilson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (27.5ms)
+  Rendered /home/edilson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /home/edilson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/edilson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/edilson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/edilson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (38.6ms)
+  Rendered /home/edilson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/edilson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/edilson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (91.0ms)
+
+
+Started GET "/logradouros/2" for 127.0.0.1 at 2016-04-10 23:23:27 -0300
+Processing by LogradourosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mLogradouro Load (0.3ms)[0m  [1mSELECT  "logradouros".* FROM "logradouros" WHERE "logradouros"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered logradouros/show.html.erb within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `num_inicio' for #<Logradouro:0x007f7f18a19778>):
+    12: 
+    13: <p>
+    14:   <strong>Num inicio:</strong>
+    15:   <%= @logradouro.num_inicio %>
+    16: </p>
+    17: 
+    18: <p>
+  app/views/logradouros/show.html.erb:15:in `_app_views_logradouros_show_html_erb__584702048851724746_70091925382840'
+
+
+  Rendered /home/edilson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.9ms)
+  Rendered /home/edilson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /home/edilson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/edilson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (26.7ms)
+  Rendered /home/edilson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/edilson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/edilson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/edilson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/edilson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (21.6ms)
+  Rendered /home/edilson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/edilson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/edilson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (39.1ms)
+
+
+Started GET "/logradouros" for 127.0.0.1 at 2016-04-10 23:23:56 -0300
+Processing by LogradourosController#index as HTML
+  [1m[35mLogradouro Load (48.9ms)[0m  SELECT "logradouros".* FROM "logradouros"
+  Rendered logradouros/index.html.erb within layouts/application (4366.1ms)
+Completed 200 OK in 4382ms (Views: 4332.6ms | ActiveRecord: 48.9ms)
+
+
+Started GET "/logradouros/2" for 127.0.0.1 at 2016-04-10 23:24:03 -0300
+Processing by LogradourosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mLogradouro Load (0.3ms)[0m  [1mSELECT  "logradouros".* FROM "logradouros" WHERE "logradouros"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered logradouros/show.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `num_inicio' for #<Logradouro:0x007f7f1a0eb8c0>):
+    12: 
+    13: <p>
+    14:   <strong>Num inicio:</strong>
+    15:   <%= @logradouro.num_inicio %>
+    16: </p>
+    17: 
+    18: <p>
+  app/views/logradouros/show.html.erb:15:in `_app_views_logradouros_show_html_erb__584702048851724746_70091942966720'
+
+
+  Rendered /home/edilson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.3ms)
+  Rendered /home/edilson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /home/edilson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/edilson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.2ms)
+  Rendered /home/edilson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/edilson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/edilson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/edilson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/edilson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (22.0ms)
+  Rendered /home/edilson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/edilson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/edilson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (42.3ms)
+
+
+Started GET "/logradouros/2" for 127.0.0.1 at 2016-04-10 23:24:04 -0300
+Processing by LogradourosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mLogradouro Load (0.3ms)[0m  SELECT  "logradouros".* FROM "logradouros" WHERE "logradouros"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered logradouros/show.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `num_inicio' for #<Logradouro:0x007f7f329f3f68>):
+    12: 
+    13: <p>
+    14:   <strong>Num inicio:</strong>
+    15:   <%= @logradouro.num_inicio %>
+    16: </p>
+    17: 
+    18: <p>
+  app/views/logradouros/show.html.erb:15:in `_app_views_logradouros_show_html_erb__584702048851724746_70091925382840'
+
+
+  Rendered /home/edilson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.5ms)
+  Rendered /home/edilson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /home/edilson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/edilson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.9ms)
+  Rendered /home/edilson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/edilson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/edilson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/edilson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/edilson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (18.4ms)
+  Rendered /home/edilson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/edilson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/edilson/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (36.7ms)
+
+
+Started GET "/logradouros/2" for 127.0.0.1 at 2016-04-10 23:24:29 -0300
+Processing by LogradourosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mLogradouro Load (1.1ms)[0m  [1mSELECT  "logradouros".* FROM "logradouros" WHERE "logradouros"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered logradouros/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 19ms (Views: 17.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/scaffolds.self-0d37b220a9d6985f972f484f9e6877807cf2c5d1e7f99d826df5f9b2f04a4163.css?body=1" for 127.0.0.1 at 2016-04-10 23:24:30 -0300
+
+
+Started GET "/assets/logradouros.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-10 23:24:30 -0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-04-10 23:24:30 -0300
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-04-10 23:24:30 -0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-04-10 23:24:30 -0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-04-10 23:24:30 -0300
+
+
+Started GET "/assets/logradouros.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-10 23:24:30 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-04-10 23:24:30 -0300
+
+
+Started GET "/logradouros/2/edit" for 127.0.0.1 at 2016-04-10 23:24:32 -0300
+Processing by LogradourosController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mLogradouro Load (0.3ms)[0m  SELECT  "logradouros".* FROM "logradouros" WHERE "logradouros"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered logradouros/_form.html.erb (97.3ms)
+  Rendered logradouros/edit.html.erb within layouts/application (98.6ms)
+Completed 200 OK in 114ms (Views: 112.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/logradouros" for 127.0.0.1 at 2016-04-10 23:24:38 -0300
+Processing by LogradourosController#index as HTML
+  [1m[36mLogradouro Load (47.7ms)[0m  [1mSELECT "logradouros".* FROM "logradouros"[0m
+  Rendered logradouros/index.html.erb within layouts/application (3607.7ms)
+Completed 200 OK in 3623ms (Views: 3574.7ms | ActiveRecord: 47.7ms)
+
+
+Started GET "/logradouros" for 127.0.0.1 at 2016-04-10 23:24:42 -0300
+Processing by LogradourosController#index as HTML
+  [1m[35mLogradouro Load (81.7ms)[0m  SELECT "logradouros".* FROM "logradouros"
+  Rendered logradouros/index.html.erb within layouts/application (3994.4ms)
+Completed 200 OK in 4009ms (Views: 3926.8ms | ActiveRecord: 81.7ms)
+
+
+Started GET "/logradouros" for 127.0.0.1 at 2016-04-10 23:24:46 -0300
+Processing by LogradourosController#index as HTML
+  [1m[36mLogradouro Load (53.7ms)[0m  [1mSELECT "logradouros".* FROM "logradouros"[0m
+  Rendered logradouros/index.html.erb within layouts/application (3852.2ms)
+Completed 200 OK in 3872ms (Views: 3817.6ms | ActiveRecord: 53.7ms)
+
+
+Started GET "/logradouros" for 127.0.0.1 at 2016-04-10 23:24:50 -0300
+Processing by LogradourosController#index as HTML
+  [1m[35mLogradouro Load (68.7ms)[0m  SELECT "logradouros".* FROM "logradouros"
+  Rendered logradouros/index.html.erb within layouts/application (4206.4ms)
+Completed 200 OK in 4223ms (Views: 4153.9ms | ActiveRecord: 68.7ms)
+
+
+Started GET "/logradouros" for 127.0.0.1 at 2016-04-10 23:24:54 -0300
+Processing by LogradourosController#index as HTML
+  [1m[36mLogradouro Load (62.9ms)[0m  [1mSELECT "logradouros".* FROM "logradouros"[0m
+  Rendered logradouros/index.html.erb within layouts/application (4296.1ms)
+Completed 200 OK in 4308ms (Views: 4245.1ms | ActiveRecord: 62.9ms)

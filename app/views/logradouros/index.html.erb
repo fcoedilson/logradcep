@@ -7,8 +7,6 @@
     <tr>
       <th>Nome</th>
       <th>Cep</th>
-      <th>Num inicio</th>
-      <th>Num fim</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,8 +16,6 @@
       <tr>
         <td><%= logradouro.nome %></td>
         <td><%= logradouro.cep %></td>
-        <td><%= logradouro.num_inicio %></td>
-        <td><%= logradouro.num_fim %></td>
         <td><%= link_to 'Show', logradouro %></td>
         <td><%= link_to 'Edit', edit_logradouro_path(logradouro) %></td>
         <td><%= link_to 'Destroy', logradouro, method: :delete, data: { confirm: 'Are you sure?' } %></td>
