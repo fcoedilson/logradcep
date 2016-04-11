@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @logradouro.nome %>
+</p>
+
+<p>
+  <strong>Cep:</strong>
+  <%= @logradouro.cep %>
+</p>
+
+<p>
+  <strong>Num inicio:</strong>
+  <%= @logradouro.num_inicio %>
+</p>
+
+<p>
+  <strong>Num fim:</strong>
+  <%= @logradouro.num_fim %>
+</p>
+
+<%= link_to 'Edit', edit_logradouro_path(@logradouro) %> |
+<%= link_to 'Back', logradouros_path %>
